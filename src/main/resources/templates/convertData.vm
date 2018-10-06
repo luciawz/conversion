@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- 适应移动端end -->
+  <title>酷喵-开启未来家庭互联网新生态_酷喵官网</title>
+  <meta name="keywords" content="酷喵,家庭互联网,酷喵官网">
+  <meta name="description" content="酷喵是互联网大屏解决方案第一品牌，酷喵为互联网大屏提供涵盖操作系统、操控做梦、视听内容、数据等立体式的解决方案，为你呈现多类别、更流畅、快更新、酷娱乐、全资讯的炫酷生活">
+  <script>
+    document.getElementsByTagName('html')[0].style['font-size'] = (document.documentElement.clientWidth / 10) + 'px';
+  </script>
+  
+  <link rel="stylesheet" type="text/css" href="//g.alicdn.com/de/minisite/0.0.4/page/rule-m/index.css">
+  <script type="text/javascript" src="//g.alicdn.com/de/minisite/0.0.4/lib/js/zepto.min.js"></script>
+  <!-- <script type="text/javascript" src="/index.js"></script> -->
+
+  <script>
+    var host = window.location.host;
+    if(host != 'localhost' && host != 'g.alicdn.com' && host != '127.0.0.1'){
+      if(device.mobile() && !/^m\.\S+/.test(host)) window.location.host = 'm.'+host;
+      if(!device.mobile() && /^m\.\S+/.test(host)) window.location.host = host.replace('m.','');
+    }
+  </script>
+  <!--<link rel="stylesheet" type="text/css" href="//g.alicdn.com/de/minisite/0.0.4/lib/css/swiper.min.css">
+  <script type="text/javascript" src="//g.alicdn.com/de/minisite/0.0.4/lib/js/zepto.min.js"></script>
+  <script type="text/javascript" src="//g.alicdn.com/de/minisite/0.0.4/lib/js/swiper.min.js"></script>
+  <script type="text/javascript" src="//g.alicdn.com/de/minisite/0.0.4/page//index.js"></script>
+  <link rel="stylesheet" type="text/css" href="//g.alicdn.com/de/minisite/0.0.4/page//index.css">-->
+</head>
+<body>
+
+  
+  <div class="header">
+    <div class="main-nav">
+      <div class="menu"></div>
+      <img class="logo" src="https://img.alicdn.com/tfs/TB1JwiHQFXXXXbDXpXXXXXXXXXX-130-58.png">
+    </div>
+
+    <div class="sub  hide">
+      <div class="sub-nav-1 hide">
+        <a class="item" href="./detail.html" target="_self"><s class="mohe-icon"></s>天猫魔盒</a><a class="item  " href="./detail-tv.html" target="_self"><s class="tv-icon"></s>智能电视</a><a class="item"><s class="app-icon"></s>APP</a>
+      </div>
+      <div class="sub-nav-2 hide">
+        <a class="" href="#haier" target="_self">海尔</a><a class="" href="#sharp" target="_self">夏普</a><a class="" href="#hisense" target="_self">海信</a>
+        <a class="" href="#konka" target="_self">康佳</a><a class="" href="#samsung" target="_self">三星</a><a class="" href="#kktv" target="_self">KKTV</a>
+        <a class="" href="#philips" target="_self">飞利浦</a><a class="" href="#mooka" target="_self">模卡</a><a class="" href="#ch" target="_self">长虹</a>
+      </div>
+    </div>
+
+    <div class="expand">
+      <ul>
+        <li class="item"><a class="" href="./index.html" target="_self">首页</a></li>
+        <li class="item"><a class="" href="./about.html" target="_self">了解酷喵</a></li>
+        <li class="item">
+          <a class="" href="javascript:void(0);" target="_self">产品详情</a>
+          <p class="expand-sub hide">
+            <a href="./list.html" target="_self">天猫魔盒</a>
+            <a href="./list-tv.html" target="_self">智能电视</a>
+            <a href="http://pd.youku.com/CIBN?spm=a2hpd.20022520.sort.1!8~3!2~P~A">APP</a>
+          </p>
+        </li>
+        <li class="item"><a class="" href="./news.html" target="_self">新闻活动</a></li>
+        <li class="item"><a class="" href="./vip.html" target="_self">酷喵会员</a></li>
+       <!--  <li class="item"><a class="" href="">新闻活动</a></li>
+        <li class="item"><a class="" href="">酷喵会员</a></li> -->
+      </ul>
+
+      <div class="sns-wrap">
+        <div class="sns">
+          <a class="weixin" href="javascript:void(0);">
+            <div class="code hide">
+              <p class="t1">微信搜索关注</p>
+              <p class="t2">阿里数娱</p>
+              <p class="t3">ID:alishuyuffical</p>
+
+              <div class="vee"></div>
+            </div>
+          </a>
+          <s class="sep"></s>
+          <a class="sina" href=""></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script type="text/javascript">
+    function Header() {
+      this.init = function() { //构造函数
+        this.isAnim = 0;
+
+        this.menu = $('.header .menu');
+        this.expand = $('.header .expand');
+
+        this.bindEvent();
+      }
+      this.bindEvent = function() {
+        var self = this;
+        self.menu.on('click tap',function(e){
+          if(self.isAnim){
+            return;
+          }
+          self.isAnim = 1;
+
+          if(self.menu.hasClass('menu1')){ //收起
+            self.hideSubMenu();
+          }else{ //展开
+            self.showSubMenu();
+          }
+          self.menu.toggleClass('menu1');
+        });
+
+        //下拉导航
+        this.expandEvent();
+
+        //二维码
+        $('.header .weixin').on('click tap',function(e){
+          $('.header .weixin .code').toggleClass('hide');
+        });
+
+        //总控制
+        $('.header').on('click tap',function(e){
+          if(!($(e.target).hasClass('weixin'))){
+            $('.header .weixin .code').addClass('hide');
+          }
+        });
+        $('.header').on('touchmove',function(e){
+          console.log('---scroll----');
+          self.hideSubMenu();
+          self.menu.toggleClass('menu1');
+        });
+      }
+
+      this.expandEvent = function(){
+        $('.header .expand .item').on('click tap',function(e){
+          //e.stopPropagation();
+
+          if($(e.target).parent().hasClass('expand-sub')){
+            return;
+          }
+
+          var tar = $(e.currentTarget);
+          if(tar.has('.expand-sub').size() > 0){
+            tar.find('.expand-sub').toggleClass('hide');
+            e.preventDefault();
+          }
+        });
+      }
+
+      this.hideSubMenu = function(){
+        var self = this;
+        this.expand.animate({
+          height:'0px'
+        }, 500,
+        'ease-out',function(){
+          self.isAnim = 0;
+
+          $('.main-nav').animate({
+            background:'rgba(255, 255, 255, 0.9)'
+          },100);
+        });
+      }
+
+      this.showSubMenu = function(){
+        var self = this;
+
+        var h = document.documentElement.clientHeight;
+
+        this.expand.css('visibility','visible');
+        this.expand.animate({
+          height: h + 'px'
+        }, 500,
+        'ease-out',function(){
+          self.isAnim = 0;
+        });
+        $('.main-nav').animate({
+          background:'rgba(255, 255, 255, 1)'
+        },100);
+      }
+    }
+
+    new Header().init();
+
+  </script>
+
+  <div class="page-container">
+    <div class="title">隐私条款</div>
+    <div class="meta">
+      <p>我方非常重视用户个人信息（即能够独立或与其他信息结合后识别用户身份的信息）的保护，在您使用我方提供的服务时，您同意我方按照在我方平台上公布的隐私权政策收集、存储、使用、披露和保护您的个人信息。我方希望通过隐私权政策向您清楚地介绍我方对您个人信息的处理方式，因此我方建议您完整地阅读隐私权政策，以帮助您更好地保护您的隐私权。</p>
+      <p>如您对本隐私权政策有任何疑问，您可以通过我方平台公布的联系方式与我们联系。如果您不同意本隐私权政策任何内容，您应立即停止使用我方平台服务。当您使用我方平台提供的任一服务时，即表示您已同意我们按照本隐私权政策来合法使用和保护您的个人信息。</p>
+    </div>
+
+    <div class="meta">
+      <p class="para">承载阿里业务（阿里影视业务）A模式、B模式的智能电视、天猫魔盒、联盟盒子中的隐私政策。 <br>在阿里家庭娱乐互联网电视软件许可使用及服务协议的隐私政策。</p>
+
+
+      <h3>信息保护政策</h3>
+
+      <h4>信息收集目的</h4>
+      <p><s class="cir"></s>基于更好地了解客户、改进产品、服务和广告宣传而收集、使用、转让和披露非个人信息。</p>
+      <p><s class="cir"></s>个人信息的收集主要是基于以下目的：</p>
+      <p>a.为您提供服务不得不收集，否则服务无法提供，或无法保证您的登录及帐号安全，或无法保障交易安全和服务的精准度。</p>
+      <p>b.改善产品和服务，以期更好地满足您的需求，为您提供定制化服务，否则您的产品或者服务体验将得不到改善并将可能持续性地相对弱化。</p>
+      <p>c.为提高您使用本公司提供的服务的安全性，更准确地预防钓鱼网站欺诈和木马病毒，本公司可能会通过了解一些您的使用习惯、偏好等信息来判断您账户的风险，并可能会记录一些本公司认为有风险的信息，并据此修正甚至中止对您的账户的服务。</p>
+
+      <h4>信息使用方式</h4>
+      <p><s class="cir"></s>本公司可能将前述信息包括个人信息用于审计、数据分析、研究以及与关联公司之间共享等内部目的，以期改进产品与服务，并向您及其他广大用户提供。</p>
+      <p><s class="cir"></s>前述信息使得本公司可以将数娱软件的最新产品、软件更新、条款变更及活动预告及时通知您，即有助于提高服务的人性化、为您提供个性化服务。</p>
+      <p><s class="cir"></s>如果您参与抽奖、竞赛或类似推广活动，前述信息将被用于管理此类活动；您知晓并同意，如您获奖或取得纪念品，您的通讯地址将被提供给奖品或纪念品发放者。</p>
+      <p><s class="cir"></s>除非得到您的明确授权，本公司不会向本公司之外的第三方提供您的个人信息。同时，本公司只会为提供或改进产品、服务和广告宣传之目的而与第三方共享个人信息，而不会为第三方的营销目的与第三方共享个人信息，更不会销售个人信息。本公司将要求任何获悉您的个人信息的第三方严格遵守保密约定和本信息保护政策的要求。</p>
+      <p><s class="cir"></s>在得到您的明确授权的前提下，本公司可能与提供信息处理、提供信贷、履行订单、管理和增强客户数据、提供客户服务、提供推广服务、评估您对本公司产品和服务的兴趣、开展客户调查或满意度调查的公司分享您个人信息。本公司将要求上述服务提供商严格遵守保密约定和本信息保护政策的要求。</p>
+      <p><s class="cir"></s>根据政府部门的合法要求或依司法机关的指令，本公司可能必须披露您的个人信息。</p>
+      <p><s class="cir"></s>为了执行本公司与您签署的协议的条款、保护本公司的经营或用户或涉及重大公共利益，如果本公司确定披露是合理且必须的，则本公司可披露与您有关的信息。</p>
+      <p><s class="cir"></s>如果本公司发生重组、合并或出售，则本公司可将收集的一切个人信息转让给交易相关方。</p>
+
+      <h4>用户选择权</h4>
+      <p>对于您个人信息的收集和使用，本公司将会在本政策之外另行听取您的不同意见，</p>
+      <p>您可以登录<a href="http://www.yunos.com/tv.html" class="ft1" target="_blank">http://www.yunos.com/tv.html</a>向本公司提出。本公司将会在收到您的不同意见之后与您充分协商，在获得您的同意之后再收集和使用您的个人信息。</p>
+
+      <h4>个人信息的保护</h4>
+      <p>本公司会采取各种预防措施来保护您的个人信息，以保障您的个人信息免遭丢失、盗用和误用，以及被擅自取阅、披露、更改或销毁。为确保您个人信息的安全，本公司有严格的信息安全规定和流程，并有专门的信息安全团队在公司内部严格执行上述措施。您的信息存储于本公司位于中国的服务器上，但为了安全及备份的需要，本公司可能将您的信息和资料储存到关联公司和（或）其他提供相应专业服务的公司的服务器上。</p>
+      <p>如果新颁布的法律将 IP 地址或类似识别标记视为个人信息，则本公司亦将此等视为个人信息予以保护。</p>
+
+      <h4>个人信息的保存期限</h4>
+      <p>本公司将在实现本协议目的所必需的期间内保留您的个人信息，除非法律要求或允许在更长的期间内保留该等信息。</p>
+    </div>
+
+    <div class="meta meta1"><a href="http://mapp.youku.com/service/agreement" target="_blank">优酷隐私权政策 >  </a></div>
+    <div class="meta meta1" style="border-bottom: none;"><a href="http://www.yunos.com/legal/info-protection.html?spm=a2c01.7620822.0.0.0FMkDF" target="_blank">YunOS TV相关隐私政策 >  </a></div>
+  </div>
+
+  <div class="footer">
+<script>
+  Zepto(function($){
+    // 渐隐
+    var wh = $(window).height();
+    var load_lock = false
+    var load = function(dom, scope){
+      // 操作锁
+      if(load_lock) return false
+      load_lock = true
+      var dom_list = []
+      dom.each(function(index, el) {
+        var top = $(this).offset().top;
+        if(top < (scope+wh)){
+          dom_list.push($(this));
+        }
+        if(dom_list.length > 1){
+          //同时需要删除多个的时候需要设置时差
+          dom_list[0].removeClass('load')
+          var i = 1
+          var timer = setInterval(function(){
+            if(i >= dom_list.length){
+              clearInterval(timer);
+            }else{
+              dom_list[i].removeClass('load');
+              i++;
+            }
+          }, 500)
+        }else if(dom_list.length == 1){
+          dom_list[0].removeClass('load');
+        }
+        load_lock = false
+      });
+    }
+    load($('.load'), $(window).scrollTop())
+    $(document).on('scroll', function(event) {
+      /* Act on the event */
+      var dom = $('.load');
+      if(dom.length > 0){
+        load(dom, $(window).scrollTop())
+      }else{
+        // 不存在load后释放资源
+        $(document).off('scroll');
+      }
+    });
+    var w = $(window).width(),
+        h = $(window).height();
+    var portrait = h > w;
+    $(window).resize(function(event) {
+      var w = $(this).width(),
+          h = $(this).height()
+      if((h > w) == !portrait){
+        window.location.reload()
+      }
+    });
+  })
+  </script>
+  <div class="linkin">
+    <div class="content">
+      <div class="vee"></div>
+      <img class="logo" src="https://img.alicdn.com/tfs/TB1005sQFXXXXXvXpXXXXXXXXXX-190-31.png"/>
+
+      <div class="terms">
+        <a href="./about.html" target="_self">关于我们</a><a href="./law.html" target="_self">法律声明</a><a href="./rule.html" target="_self">隐私条款</a>
+      </div>
+      <div class="friendly">
+        <span class="label">友情链接</span>
+        <a href="http://www.youku.com" target="_blank">优酷</a><a href="https://tshop.tmall.com/shop/view_shop.htm" target="_blank">天猫魔盒官方旗舰店</a>
+      </div>
+      <div class="sns">
+        <a class="weixin" href="javascript:void(0);"></a>
+        <a class="sina" href="http://weibo.com/alifun?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank"></a>
+      </div>
+      <div class="code code1">
+        <p class="t1">微信搜索关注</p>
+        <p class="t2">阿里数娱</p>
+        <p class="t3">ID:alishuyuffical</p>
+
+        <div class="vee"></div>
+      </div>
+
+      <div class="code code2">
+        <img src="https://img.alicdn.com/tfs/TB10hXLQVXXXXa4XFXXXXXXXXXX-344-344.jpg">
+        <div class="vee"></div>
+      </div>
+    </div>
+  </div>
+  <div class="extra">
+    京ICP备17023829号<br>© 2016-2017 合一信息技术（北京）有限公司版权所有
+  </div>
+  <script type="text/javascript">
+    (function(){
+      var cwfooter = document.documentElement.clientWidth;
+      var code = $('.code2');
+
+      if(cwfooter <= 1200){
+        code = $('.code1');
+      }
+
+      var wx = $('.weixin');
+      wx.on('mouseover',function(e){
+        code.show();
+      });
+      wx.on('mouseout',function(e){
+        code.hide();
+      });
+
+      $('.footer').on('tap',function(e){
+        if(e.target.hasClass('.weixin')){
+          code.show();  
+        }else{
+          code.hide();
+        }
+      });
+
+      // $('.terms a').on('click',function(e){
+      //   e.preventDefault();
+      //   var target = $(e.target);
+      //   var url = target.attr('href');
+      //   if(device.mobile()){
+      //     url = url.replace('/index.html','/index.html');
+      //   }
+      //   location.href = url;
+      // });
+      
+    })();
+  </script>
+</div>
+
+</body>
+</html>
+
+
+
+
